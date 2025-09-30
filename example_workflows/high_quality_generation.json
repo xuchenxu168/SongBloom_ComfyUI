@@ -1,0 +1,1161 @@
+{
+  "id": "87df210b-7606-48d2-8763-5ac3a74e000b",
+  "revision": 0,
+  "last_node_id": 92,
+  "last_link_id": 134,
+  "nodes": [
+    {
+      "id": 11,
+      "type": "easy showAnything",
+      "pos": [
+        1016.2979125976562,
+        587.8026733398438
+      ],
+      "size": [
+        337.0107727050781,
+        100.12284851074219
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 132
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1148fbe5fe0276780c56f0adfa22b96d5200d832",
+        "Node name for S&R": "easy showAnything",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Not saved"
+      ]
+    },
+    {
+      "id": 24,
+      "type": "easy showAnything",
+      "pos": [
+        1408.3470458984375,
+        475.62103271484375
+      ],
+      "size": [
+        210,
+        88
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 59
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1148fbe5fe0276780c56f0adfa22b96d5200d832",
+        "Node name for S&R": "easy showAnything",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "audio\\songbloom_output_1759193789.flac"
+      ]
+    },
+    {
+      "id": 86,
+      "type": "SongBloomDeepSeekLyricFormatter",
+      "pos": [
+        -135.22378540039062,
+        -688.9873657226562
+      ],
+      "size": [
+        294.68682861328125,
+        604.9955444335938
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "formatted_lyrics",
+          "type": "STRING",
+          "links": [
+            119
+          ]
+        },
+        {
+          "name": "raw_response",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SongBloomDeepSeekLyricFormatter",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "lyrics": true,
+            "api_key": true,
+            "model": true,
+            "system_prompt": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "请输入原始歌词或提示",
+        "",
+        "DeepSeek-V3",
+        "## 角色设定 (System Role):\n你是一名专业的歌词专家。你的任务是将用户提供的歌词，严格按照示列的格式转换成质量的符合歌词格式的歌词，用于歌词生成音频。\n## 任务说明 (User Instruction):\n请仔细观察提供的歌词提示内容，并生成一段详细、具体、富有创造性的符合歌词格式的高质量歌词，\n## 输出要求 (Output Requirements):\n**   **语言**： 严格使用中文。\n**   **格式**： 严格按照示例格式转换歌词。\n## 只生成歌词，任何其它的词\n\n歌词严格按照下面的格式：\n[intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] , [verse] 高质量音频生成测试. 使用优化参数设置. CFG系数提高到三点零. 步数增加到一百步 , [chorus] 清晰的音质表现. 丰富的音乐细节. 每个音符都精准. 高保真音频体验 , [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] , [verse] 降低随机性参数. 提高生成稳定性. 更长的推理时间. 换来更好的质量 , [bridge] 当音乐响起的时候. 每一个细节都清晰. 从低音到高音频段. 都有完美的表现 , [chorus] 清晰的音质表现. 丰富的音乐细节. 每个音符都精准. 高保真音频体验 , [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro]",
+        743308318305575,
+        "randomize"
+      ]
+    },
+    {
+      "id": 90,
+      "type": "SongBloomLyricGenerator",
+      "pos": [
+        -937.109375,
+        -688.3843383789062
+      ],
+      "size": [
+        400,
+        580
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "generated_lyrics",
+          "type": "STRING",
+          "links": [
+            122
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SongBloomLyricGenerator",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "text_prompt": true,
+            "style": true,
+            "mood": true,
+            "language": true,
+            "structure": true,
+            "length": true,
+            "format_style": true,
+            "use_deepseek": true,
+            "deepseek_api_key": true,
+            "deepseek_model": true,
+            "deepseek_system_prompt": true,
+            "custom_tags": true,
+            "theme_keywords": true,
+            "user_requirements": true,
+            "rhyme_scheme": true,
+            "line_length": true,
+            "repetition_style": true,
+            "emotional_intensity": true,
+            "target_audience": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "写一首关于青春回忆的歌曲，包含对过去美好时光的怀念和对未来的憧憬",
+        "pop",
+        "nostalgic",
+        "chinese",
+        "standard",
+        "medium",
+        "traditional",
+        true,
+        "",
+        "DeepSeek-V3",
+        "## 角色设定 (System Role):\n你是一名专业的歌词专家。你的任务是根据提示词，谱写一首非常专业的精湛的歌词，歌词要丰富多彩，情真意切。\n## 任务说明 (User Instruction):\n请仔细观察提供的歌词提示内容，并谱写一段详细、具体、富有创造性的符合歌词格式的高质量歌词，\n## 输出要求 (Output Requirements):\n**   **语言**： 严格使用中文。\n**   **格式**： 严格按照下面示例格式谱写歌词，严格按照格式，不要分段。\n## 只生成歌词，无任何其它的词\n\n歌词严格按照下面的格式：\n[intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] , [verse] 高质量音频生成测试. 使用优化参数设置. CFG系数提高到三点零. 步数增加到一百步 , [chorus] 清晰的音质表现. 丰富的音乐细节. 每个音符都精准. 高保真音频体验 , [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] , [verse] 降低随机性参数. 提高生成稳定性. 更长的推理时间. 换来更好的质量 , [bridge] 当音乐响起的时候. 每一个细节都清晰. 从低音到高音频段. 都有完美的表现 , [chorus] 清晰的音质表现. 丰富的音乐细节. 每个音符都精准. 高保真音频体验 , [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro]",
+        "",
+        "",
+        "",
+        "none",
+        "medium",
+        "moderate",
+        "medium",
+        "general"
+      ]
+    },
+    {
+      "id": 39,
+      "type": "easy showAnything",
+      "pos": [
+        -506.68048095703125,
+        -680.8551635742188
+      ],
+      "size": [
+        345.2799987792969,
+        494.5950622558594
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 122
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1148fbe5fe0276780c56f0adfa22b96d5200d832",
+        "Node name for S&R": "easy showAnything",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "\n[intro]\n轻柔的旋律响起\n回忆如潮水般涌来\n时光斑驳月如歌\n心中的故事开始\n\n[verse]\n那些年我们一起走过\n青春岁月如诗如画\n梦想在心中发芽\n未来在远方等待\n\n[chorus]\n这是我们的青春之歌\n唱出心中的梦想\n无论走到哪里\n永远记得这一刻\n\n[verse]\n那些年我们一起走过\n青春岁月如诗如画\n梦想在心中发芽\n未来在远方等待\n\n[chorus]\n这是我们的青春之歌\n唱出心中的梦想\n无论走到哪里\n永远记得这一刻\n\n[bridge]\n当夜幕降临\n星光点点\n我们依然相信\n美好的明天\n\n[chorus]\n这是我们的青春之歌\n唱出心中的梦想\n无论走到哪里\n永远记得这一刻\n\n[outro]\n歌声渐渐远去\n回忆永远珍藏\n这是我们的故事\n青春永不散场\n[outro]"
+      ]
+    },
+    {
+      "id": 85,
+      "type": "easy showAnything",
+      "pos": [
+        196.8016357421875,
+        -668.6168823242188
+      ],
+      "size": [
+        446.45208740234375,
+        431.01519775390625
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 119
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1148fbe5fe0276780c56f0adfa22b96d5200d832",
+        "Node name for S&R": "easy showAnything",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "[intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] , [verse] 那些年我们一起走过. 青春岁月如诗如画. 梦想在心中发芽. 未来在远方等待 , [chorus] 这是我们的青春之歌. 唱出心中的梦想. 无论走到哪里. 永远记得这一刻 , [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] , [verse] 那些年我们一起走过. 青春岁月如诗如画. 梦想在心中发芽. 未来在远方等待 , [bridge] 当夜幕降临. 星光点点. 我们依然相信. 美好的明天 , [chorus] 这是我们的青春之歌. 唱出心中的梦想. 无论走到哪里. 永远记得这一刻 , [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro]"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "easy showAnything",
+      "pos": [
+        1001.00732421875,
+        415.6275634765625
+      ],
+      "size": [
+        345.5934753417969,
+        105.97468566894531
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 131
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1148fbe5fe0276780c56f0adfa22b96d5200d832",
+        "Node name for S&R": "easy showAnything",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Generated song successfully. Duration: 142.08s"
+      ]
+    },
+    {
+      "id": 66,
+      "type": "SongBloomLyricProcessor",
+      "pos": [
+        36.562644958496094,
+        306.6480712890625
+      ],
+      "size": [
+        394.2004089355469,
+        369.23516845703125
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "processed_lyrics",
+          "type": "STRING",
+          "slot_index": 0,
+          "links": []
+        },
+        {
+          "name": "validation_info",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "📝 高质量测试歌词",
+      "properties": {
+        "Node name for S&R": "SongBloomLyricProcessor",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "[intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] , [verse] 那些年我们一起追逐梦想. 在无尽的星空下自由飞翔. 青春的火焰在心中燃烧. 每个瞬间都铭刻在记忆中. 快乐的摇滚节奏. 快乐的摇滚节奏, [chorus] 这是我们的青春之歌. 唱出心中的梦想. 无论走到哪里. 永远记得这一刻. 快乐的摇滚节奏. 快乐的摇滚节奏, [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] , [verse] 过往的岁月如歌飘然而过. 但那份情感永不褪色. 即使分开. 心依然相连. 未来的路依旧在脚下延展. 快乐的摇滚节奏. 快乐的摇滚节奏, [bridge] 当夜空灿烂星光闪烁. 我们的笑容如晨曦般明亮. 音乐伴随心跳的节奏. 一起迎接明日的晨光. 快乐的摇滚节奏. 快乐的摇滚节奏, [chorus] 这是我们的青春之歌. 唱出心中的梦想. 无论走到哪里. 永远记得这一刻. 快乐的摇滚节奏. 快乐的摇滚节奏, [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] ",
+        true
+      ]
+    },
+    {
+      "id": 45,
+      "type": "LoadAudio",
+      "pos": [
+        -52.765743255615234,
+        861.8783569335938
+      ],
+      "size": [
+        385.9704895019531,
+        164.9705047607422
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            96
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.60",
+        "Node name for S&R": "LoadAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "audio": true,
+            "audioUI": true,
+            "upload": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "情歌.flac",
+        null,
+        null
+      ]
+    },
+    {
+      "id": 74,
+      "type": "SongBloomAudioCropper",
+      "pos": [
+        369.162109375,
+        861.012939453125
+      ],
+      "size": [
+        270,
+        126
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 96
+        }
+      ],
+      "outputs": [
+        {
+          "name": "cropped_audio",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "name": "info",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SongBloomAudioCropper",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "start_sec": true,
+            "end_sec": true,
+            "pad_to_end": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        6,
+        16,
+        false
+      ]
+    },
+    {
+      "id": 61,
+      "type": "SongBloomLyricProcessor",
+      "pos": [
+        -417.1410217285156,
+        393.14056396484375
+      ],
+      "size": [
+        323.5286865234375,
+        268.8783874511719
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lyrics",
+          "type": "STRING",
+          "widget": {
+            "name": "lyrics"
+          },
+          "link": 134
+        }
+      ],
+      "outputs": [
+        {
+          "name": "processed_lyrics",
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            133
+          ]
+        },
+        {
+          "name": "validation_info",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "📝 高质量测试歌词",
+      "properties": {
+        "Node name for S&R": "SongBloomLyricProcessor",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "[intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] , [verse] 高质量音频生成测试. 使用优化参数设置. CFG系数提高到三点零. 步数增加到一百步 , [chorus] 清晰的音质表现. 丰富的音乐细节. 每个音符都精准. 高保真音频体验 , [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] , [verse] 降低随机性参数. 提高生成稳定性. 更长的推理时间. 换来更好的质量 , [bridge] 当音乐响起的时候. 每一个细节都清晰. 从低音到高音频段. 都有完美的表现 , [chorus] 清晰的音质表现. 丰富的音乐细节. 每个音符都精准. 高保真音频体验 , [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] ",
+        true
+      ]
+    },
+    {
+      "id": 88,
+      "type": "easy showAnything",
+      "pos": [
+        -435.775146484375,
+        97.29544067382812
+      ],
+      "size": [
+        339.4645080566406,
+        220.68389892578125
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 121
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "*",
+          "links": [
+            134
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1148fbe5fe0276780c56f0adfa22b96d5200d832",
+        "Node name for S&R": "easy showAnything",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "\n[intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] , [verse] 窗外的雨滴敲打着玻璃. 回忆在心底泛起涟漪. 你的笑容还那么清晰. 却已消失在茫茫人海里 , [chorus] 我们的故事画上了句点. 像流星划过黑夜的天. 那些承诺都随风飘远. 只剩下我独自怀念 , [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] , [verse] 手机里还存着你的照片. 每看一次心就痛一遍. 说好的永远变成谎言. 我们的爱走到了终点 , [bridge] 如果时光能够倒流回从前. 我会紧紧握住你的指尖. 不让幸福从指缝溜走. 让爱情停留在最美瞬间 , [chorus] 我们的故事画上了句点. 像流星划过黑夜的天. 那些承诺都随风飘远. 只剩下我独自怀念 , [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro]"
+      ]
+    },
+    {
+      "id": 69,
+      "type": "SongBloomLyricProcessor",
+      "pos": [
+        755.107666015625,
+        -735.96044921875
+      ],
+      "size": [
+        445.19854736328125,
+        687.0182495117188
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "processed_lyrics",
+          "type": "STRING",
+          "slot_index": 0,
+          "links": []
+        },
+        {
+          "name": "validation_info",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "📝 高质量测试歌词",
+      "properties": {
+        "Node name for S&R": "SongBloomLyricProcessor",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "[intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] , [verse] 风轻轻吹过古道.岁月在墙上刻下记号.梦中你笑得多甜.醒来却只剩下寂寥.繁花似锦的春天.少了你的色彩也失了妖娆 , [chorus] 想见你.在晨曦中.在月光下.每个瞬间都渴望.没有你.星辰也黯淡.花香也无味.只剩下思念的煎熬.想见你.穿越千山万水.只为那一瞥.你的容颜 , [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] , [verse] 月儿弯弯照九州.你是否也在仰望同一片天空.灯火阑珊处.我寻觅你的影踪.回忆如波光粼粼.荡漾在心湖的每个角落 , [chorus] 想见你.在晨曦中.在月光下.每个瞬间都渴望.没有你.星辰也黯淡.花香也无味.只剩下思念的煎熬.想见你.穿越千山万水.只为那一瞥.你的容颜 , [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro]",
+        true
+      ]
+    },
+    {
+      "id": 92,
+      "type": "SongBloomLyricProcessor",
+      "pos": [
+        1250.9068603515625,
+        -724.2650146484375
+      ],
+      "size": [
+        445.19854736328125,
+        687.0182495117188
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "processed_lyrics",
+          "type": "STRING",
+          "slot_index": 0,
+          "links": []
+        },
+        {
+          "name": "validation_info",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "📝 高质量测试歌词",
+      "properties": {
+        "Node name for S&R": "SongBloomLyricProcessor",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "[intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] , [verse] 风轻轻吹过古道.岁月在墙上刻下记号.梦中你笑得多甜.醒来却只剩下寂寥.繁花似锦的春天.少了你的色彩也失了妖娆 , [chorus] 想见你.在晨曦中.在月光下.每个瞬间都渴望.没有你.星辰也黯淡.花香也无味.只剩下思念的煎熬.想见你.穿越千山万水.只为那一瞥.你的容颜 , [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] , [verse] 月儿弯弯照九州.你是否也在仰望同一片天空.灯火阑珊处.我寻觅你的影踪.回忆如波光粼粼.荡漾在心湖的每个角落 , [chorus] 想见你.在晨曦中.在月光下.每个瞬间都渴望.没有你.星辰也黯淡.花香也无味.只剩下思念的煎熬.想见你.穿越千山万水.只为那一瞥.你的容颜 , [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro]",
+        true
+      ]
+    },
+    {
+      "id": 87,
+      "type": "SongBloomLyricGenerator",
+      "pos": [
+        -910.095458984375,
+        82.75597381591797
+      ],
+      "size": [
+        391.6647033691406,
+        580
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "generated_lyrics",
+          "type": "STRING",
+          "links": [
+            121
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SongBloomLyricGenerator",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "text_prompt": true,
+            "style": true,
+            "mood": true,
+            "language": true,
+            "structure": true,
+            "length": true,
+            "custom_tags": true,
+            "theme_keywords": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "写一首情真意切的伤感情歌",
+        "pop",
+        "happy",
+        "chinese",
+        "standard",
+        "medium",
+        "modern",
+        true,
+        "",
+        "DeepSeek-V3",
+        "## 角色设定 (System Role):\n你是一名专业的歌词专家。你的任务是根据提示词，谱写一首非常专业的精湛的歌词，歌词要丰富多彩，情真意切。\n## 任务说明 (User Instruction):\n请仔细观察提供的歌词提示内容，并谱写一段详细、具体、富有创造性的符合歌词格式的高质量歌词，\n## 输出要求 (Output Requirements):\n**   **语言**： 严格使用中文。\n**   **格式**： 严格按照下面示例格式谱写歌词，严格按照格式，不要分段。\n## 只生成歌词，无任何其它的词，\n\n歌词严格按照下面的格式：\n[intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] [intro] , [verse] 高质量音频生成测试. 使用优化参数设置. CFG系数提高到三点零. 步数增加到一百步 , [chorus] 清晰的音质表现. 丰富的音乐细节. 每个音符都精准. 高保真音频体验 , [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] [inst] , [verse] 降低随机性参数. 提高生成稳定性. 更长的推理时间. 换来更好的质量 , [bridge] 当音乐响起的时候. 每一个细节都清晰. 从低音到高音频段. 都有完美的表现 , [chorus] 清晰的音质表现. 丰富的音乐细节. 每个音符都精准. 高保真音频体验 , [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro] [outro]",
+        "",
+        "",
+        "",
+        "aabb",
+        "medium",
+        "moderate",
+        "medium",
+        "general"
+      ]
+    },
+    {
+      "id": 91,
+      "type": "SongBloomGenerator",
+      "pos": [
+        512.0701293945312,
+        92.39605712890625
+      ],
+      "size": [
+        409.1387634277344,
+        594.7778930664062
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "SONGBLOOM_MODEL",
+          "link": 128
+        },
+        {
+          "name": "audio_prompt",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "lyrics",
+          "type": "STRING",
+          "widget": {
+            "name": "lyrics"
+          },
+          "link": 133
+        }
+      ],
+      "outputs": [
+        {
+          "name": "generated_audio",
+          "type": "AUDIO",
+          "links": [
+            130
+          ]
+        },
+        {
+          "name": "generation_info",
+          "type": "STRING",
+          "links": [
+            131
+          ]
+        },
+        {
+          "name": "saved_path",
+          "type": "STRING",
+          "links": [
+            132
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SongBloomGenerator",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "lyrics": true,
+            "quality_preset": true,
+            "low_memory_mode": true,
+            "max_memory_retries": true,
+            "prompt_max_seconds": true,
+            "max_frames": true,
+            "cfg_coef": true,
+            "steps": true,
+            "top_k": true,
+            "use_sampling": true,
+            "seed": true,
+            "dtype": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "",
+        "High",
+        false,
+        2,
+        10,
+        9000,
+        2,
+        50,
+        200,
+        true,
+        2937209095,
+        "randomize",
+        "bfloat16"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "SongBloomModelLoader",
+      "pos": [
+        34.261566162109375,
+        86.35519409179688
+      ],
+      "size": [
+        398.52459716796875,
+        154
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "SONGBLOOM_MODEL",
+          "slot_index": 0,
+          "links": [
+            128
+          ]
+        }
+      ],
+      "title": "🎵 模型加载器",
+      "properties": {
+        "Node name for S&R": "SongBloomModelLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "songbloom_full_150s_dpo",
+        "bfloat16",
+        "phoneme",
+        "local_first",
+        true
+      ]
+    },
+    {
+      "id": 68,
+      "type": "SongBloomAudioPreview",
+      "pos": [
+        1382.3074951171875,
+        95.49644470214844
+      ],
+      "size": [
+        295.1121520996094,
+        300
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 74
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "autoSeek": true,
+        "duration": 142.08,
+        "audioUrl": "/api/view?filename=SongBloom_Audio_1759193789.wav&type=temp&subfolder=&rand=0.9672775201306709",
+        "isPlaying": true,
+        "currentTime": 78.101755,
+        "volume": 0.87,
+        "node_id": "d1c9aee3-0811-4f5d-aff5-15abd9ef91be",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 17,
+      "type": "SongBloomAudioSaver",
+      "pos": [
+        1015.2748413085938,
+        96.89212036132812
+      ],
+      "size": [
+        290.21826171875,
+        249.3637237548828
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 130
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            74
+          ]
+        },
+        {
+          "name": "file_path",
+          "type": "STRING",
+          "links": [
+            59
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SongBloomAudioSaver",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "filename": true,
+            "format": true,
+            "output_dir": true,
+            "enable_preview": true,
+            "quality": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "songbloom_output",
+        "flac",
+        "audio",
+        "high"
+      ]
+    }
+  ],
+  "links": [
+    [
+      59,
+      17,
+      1,
+      24,
+      0,
+      "*"
+    ],
+    [
+      74,
+      17,
+      0,
+      68,
+      0,
+      "AUDIO"
+    ],
+    [
+      96,
+      45,
+      0,
+      74,
+      0,
+      "AUDIO"
+    ],
+    [
+      119,
+      86,
+      0,
+      85,
+      0,
+      "*"
+    ],
+    [
+      121,
+      87,
+      0,
+      88,
+      0,
+      "*"
+    ],
+    [
+      122,
+      90,
+      0,
+      39,
+      0,
+      "*"
+    ],
+    [
+      128,
+      1,
+      0,
+      91,
+      0,
+      "SONGBLOOM_MODEL"
+    ],
+    [
+      130,
+      91,
+      0,
+      17,
+      0,
+      "AUDIO"
+    ],
+    [
+      131,
+      91,
+      1,
+      10,
+      0,
+      "*"
+    ],
+    [
+      132,
+      91,
+      2,
+      11,
+      0,
+      "*"
+    ],
+    [
+      133,
+      61,
+      0,
+      91,
+      2,
+      "STRING"
+    ],
+    [
+      134,
+      88,
+      0,
+      61,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "🏠 输入和配置",
+      "bounding": [
+        16.115657806396484,
+        -0.06824515759944916,
+        452.6085510253906,
+        742.3992309570312
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "🎵 高质量生成",
+      "bounding": [
+        493.71868896484375,
+        1.080729365348816,
+        443.0157775878906,
+        745.9691162109375
+      ],
+      "color": "#A88",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "📊 输出和播放",
+      "bounding": [
+        948.2885131835938,
+        2.802213430404663,
+        774.9575805664062,
+        741.7111206054688
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "歌词自动生成器",
+      "bounding": [
+        -983.4843139648438,
+        -775.0299682617188,
+        1693.78369140625,
+        728.3761596679688
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 7,
+      "title": "参考音频配置",
+      "bounding": [
+        -76.0058822631836,
+        770.6724243164062,
+        773.2700805664062,
+        318.062744140625
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 8,
+      "title": "Group2222",
+      "bounding": [
+        -969.640625,
+        1.7433336973190308,
+        974.0239868164062,
+        732.95263671875
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.3109994191499987,
+      "offset": [
+        988.6176040042754,
+        149.22219183479973
+      ]
+    },
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "frontendVersion": "1.26.13",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
