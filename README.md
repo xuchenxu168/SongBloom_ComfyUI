@@ -570,6 +570,6 @@ year={2025}
 ![微信二维码](https://img.shields.io/badge/微信-扫码联系-brightgreen?style=for-the-badge&logo=wechat&logoColor=white)
 
 <div align="center">
-  <img src="https://via.placeholder.com/200x200/00C851/FFFFFF?text=WeChat+QR" alt="微信二维码" width="200" height="200">
+  <img src="https://github.com/xuchenxu168/images/blob/main/%E5%BE%AE%E4%BF%A1%E5%8F%B7.jpg" alt="微信二维码" width="200" height="200">
   <p><em>扫码添加微信，备注"SongBloom"</em></p>
 </div>
