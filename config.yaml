@@ -1,0 +1,139 @@
+# ComfyUI SongBloom Plugin Configuration
+
+# Plugin Information
+plugin:
+  name: "ComfyUI SongBloom"
+  version: "1.0.0"
+  description: "Coherent Song Generation via Interleaved Autoregressive Sketching and Diffusion Refinement"
+  author: "ComfyUI SongBloom Plugin Team"
+  license: "Same as SongBloom project"
+
+# Model Configuration
+models:
+  default_model: "songbloom_full_150s"
+  available_models:
+    - "songbloom_full_150s"
+    - "songbloom_full_150s_dpo"
+  
+  # Model repository mapping
+  repositories:
+    songbloom_full_150s: "CypressYang/SongBloom"
+    songbloom_full_150s_dpo: "CypressYang/SongBloom"
+  
+  # Default model settings
+  default_dtype: "float32"
+  cache_models: true
+  auto_download: true
+
+# Generation Settings
+generation:
+  # Default parameters
+  default_cfg_coef: 1.5
+  default_steps: 50
+  default_top_k: 200
+  default_use_sampling: true
+  default_dit_cfg_type: "h"
+  
+  # Limits
+  max_steps: 200
+  min_steps: 10
+  max_cfg_coef: 10.0
+  min_cfg_coef: 0.1
+  max_top_k: 1000
+  min_top_k: 1
+
+# Audio Settings
+audio:
+  # Default audio prompt settings
+  default_prompt_duration: 10.0
+  max_prompt_duration: 30.0
+  min_prompt_duration: 1.0
+  target_sample_rate: 48000
+  
+  # Supported formats
+  input_formats: ["wav", "flac", "mp3", "ogg"]
+  output_formats: ["wav", "flac", "mp3"]
+  default_output_format: "flac"
+
+# Lyric Settings
+lyrics:
+  # Structure tags
+  structure_tags:
+    vocal: ["[verse]", "[chorus]", "[bridge]"]
+    instrumental: ["[intro]", "[inst]", "[outro]", "[solo]", "[break]"]
+    
+  # Validation settings
+  validate_format: true
+  require_structure_tags: true
+  min_vocal_sections: 1
+  
+  # Separators
+  sentence_separator: "."
+  section_separator: ","
+
+# Performance Settings
+performance:
+  # Memory optimization
+  enable_memory_optimization: true
+  use_bfloat16_by_default: false
+  enable_flash_attention: false
+  
+  # Batch processing
+  max_batch_size: 10
+  default_batch_size: 1
+
+# Logging Settings
+logging:
+  level: "INFO"
+  enable_debug: false
+  log_generation_stats: true
+  log_model_loading: true
+
+# Cache Settings
+cache:
+  # Model cache
+  models_cache_dir: "models/SongBloom"
+  enable_model_cache: true
+  cache_size_limit_gb: 50
+  
+  # Auto cleanup
+  auto_cleanup_cache: false
+  cleanup_threshold_days: 30
+
+# Error Handling
+error_handling:
+  # Retry settings
+  max_retries: 3
+  retry_delay_seconds: 1
+  
+  # Fallback behavior
+  fallback_to_cpu: true
+  continue_on_error: true
+  
+  # Error reporting
+  detailed_error_messages: true
+  include_stack_traces: false
+
+# Node Settings
+nodes:
+  # Node categories
+  categories:
+    models: "SongBloom/Models"
+    audio: "SongBloom/Audio"
+    text: "SongBloom/Text"
+    generation: "SongBloom/Generation"
+    utils: "SongBloom/Utils"
+  
+  # Node display settings
+  show_advanced_options: false
+  compact_mode: false
+
+# Experimental Features
+experimental:
+  # Enable experimental features
+  enable_experimental: false
+  
+  # Experimental options
+  custom_model_loading: false
+  advanced_audio_processing: false
+  multi_gpu_support: false
