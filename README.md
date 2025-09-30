@@ -330,19 +330,6 @@ ComfyUI/models/SongBloom/
 - `audio`: Pass-through audio for further processing
 - `info`: Audio information (duration, sample rate, etc.)
 
-### SongBloomAdvancedConfig（进阶配置）
-
-**Inputs:**
-- `cfg_coef`: Classifier-free guidance coefficient
-- `steps`: Diffusion steps
-- `top_k`: Top-k sampling
-- `use_sampling`: Enable sampling
-- `dit_cfg_type`: DiT configuration type
-- `max_frames`: Maximum frames for generation
-
-**Outputs:**
-- `config`: Configuration object
-
 ## 歌词格式规范
 
 ### Structure Tags
