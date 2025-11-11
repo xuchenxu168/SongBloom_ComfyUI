@@ -1,6 +1,6 @@
 [project]
 name = "SongBloom_ComfyUI"
-description = "SongBloom is a music generation plugin for ComfyUI that integrates the entire process of lyrics standardization, model loading, generation, saving, and previewing, and provides DeepSeek V3 assistance for "lyric formatting"."
+description = "SongBloom is a music generation plugin for ComfyUI that integrates the entire process of lyrics standardization, model loading, generation, saving, and previewing, and provides DeepSeek V3 assistance for lyric formatting."
 version = "2.2.0"
 license = {file = "LICENSE"}
 dependencies = []
