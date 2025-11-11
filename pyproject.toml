@@ -1,17 +1,17 @@
 [project]
-name = "ComfyUI-Qwen3-VL"
-description = "Enhanced Qwen3-VL integration for ComfyUI with direct image and video support"
+name = "SongBloom_ComfyUI"
+description = "SongBloom is a music generation plugin for ComfyUI that integrates the entire process of lyrics standardization, model loading, generation, saving, and previewing, and provides DeepSeek V3 assistance for "lyric formatting"."
 version = "2.0.0"
 license = {file = "LICENSE"}
 dependencies = []
 
 [project.urls]
-Repository = "https://github.com/xuchenxu168/ComfyUI_Qwen3-VL"
-"Bug Tracker" = "https://github.com/xuchenxu168/ComfyUI_Qwen3-VL/issues"
+Repository = "https://github.com/xuchenxu168/SongBloom_ComfyUI"
+"Bug Tracker" = "https://github.com/xuchenxu168/SongBloom_ComfyUI/issues"
 #  Used by Comfy Registry https://registry.comfy.org
 
 [tool.comfy]
 PublisherId = "xuchenxu168"
-DisplayName = "ComfyUI-Qwen3-VL"
+DisplayName = "SongBloom_ComfyUI"
 Icon = ""
 includes = []
